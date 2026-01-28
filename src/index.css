@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-surface: #2e2e2e;
+  --color-ink: #e5e7eb;
+
+  /* Layout */
+  --spacing-gutter-x: 96px;
+  --spacing-gutter-y: 30px;
+
+  /* Font */
+  --font-display: "EB Garamond", serif;
+
+  /* Font scale */
+  --text-nav: 22px;
+  --text-body: 22px;
+  --text-anchor: 24px;
+  --text-hero: 64px;
+}
+
+@layer components {
+  .page-container-grid {
+    @apply grid w-full grid-cols-12 gap-x-6;
+    /* @apply grid-rows-12; */
+    height: 1024px;
+    width: 100%;
+    border: 1px dotted lightpink;
+  }
+
+  .page-container {
+    @apply py-[128px];
+    height: 1024px;
+    width: 100%;
+    border: 1px dotted lightpink;
+  }
+
+  .hero-title {
+    @apply font-normal;
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    color: var(--color-ink);
+  }
+
+  .body-text-regular {
+    @apply font-normal;
+    font-family: var(--font-display);
+    font-size: var(--text-body);
+    color: var(--color-ink);
+  }
+
+  .anchor {
+    @apply font-semibold;
+    font-family: var(--font-display);
+    font-size: var(--text-anchor);
+    color: var(--color-ink);
+  }
+
+  .nav-bold {
+    @apply font-semibold;
+    font-family: var(--font-display);
+    font-size: var(--text-nav);
+    color: var(--color-ink);
+  }
+
+  .nav-medium {
+    @apply font-normal;
+    font-family: var(--font-display);
+    font-size: var(--text-nav);
+    color: var(--color-ink);
+  }
+
+  .nav-items-gap {
+    gap: 25px;
+  }
+}
