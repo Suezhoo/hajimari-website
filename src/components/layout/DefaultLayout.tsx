@@ -1,5 +1,6 @@
 import React, { type ReactNode } from "react";
 import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 
 type DefaultLayoutProps = {
   children: ReactNode;
@@ -7,9 +8,10 @@ type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <div className="bg-surface min-h-screen min-w-screen px-gutter-x">
+    <div className="bg-surface min-h-screen min-w-screen">
       <NavigationBar />
-      {children}
+      <div className="px-gutter-x">{children}</div>
+      <Footer />
     </div>
   );
 };

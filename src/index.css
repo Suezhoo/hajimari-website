@@ -14,7 +14,8 @@
 
   /* Font scale */
   --text-nav: 22px;
-  --text-body: 22px;
+  --text-footer: 18px;
+  --text-body: 18px;
   --text-anchor: 24px;
   --text-hero: 64px;
 }
@@ -25,14 +26,19 @@
     /* @apply grid-rows-12; */
     height: 1024px;
     width: 100%;
-    border: 1px dotted lightpink;
+    /* border: 1px dotted lightpink; */
   }
 
   .page-container {
     @apply py-[128px];
     height: 1024px;
     width: 100%;
-    border: 1px dotted lightpink;
+    /* border: 1px dotted lightpink; */
+  }
+
+  .footer-container {
+    @apply grid w-full grid-cols-12 gap-x-6;
+    height: 340px;
   }
 
   .hero-title {
@@ -68,6 +74,28 @@
     font-family: var(--font-display);
     font-size: var(--text-nav);
     color: var(--color-ink);
+  }
+
+  .footer-bold {
+    @apply font-bold;
+    font-family: var(--font-display);
+    font-size: var(--text-footer);
+    color: var(--color-ink);
+  }
+
+  .footer-medium {
+    @apply font-medium;
+    font-family: var(--font-display);
+    font-size: var(--text-footer);
+    color: var(--color-ink);
+  }
+
+  .footer-border {
+    border-top: 10px solid #8b7fa8;
+  }
+
+  .footer-separator {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .nav-items-gap {

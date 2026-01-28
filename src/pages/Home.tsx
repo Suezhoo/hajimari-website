@@ -68,7 +68,7 @@ const Home = () => {
       </div>
 
       {/* Corrupted energy section */}
-      <div className="page-container flex flex-col justify-end gap-[64px]">
+      <div className="page-container flex flex-col justify-end gap-[32px]">
         <div className="flex justify-between gap-[256px]">
           <p className="anchor">
             The awakend are rare individuals capable of perceiving and

@@ -2,7 +2,7 @@ import React from "react";
 
 const NavigationBar = () => {
   return (
-    <div className="flex justify-between py-gutter-y">
+    <div className="flex justify-between py-gutter-y px-gutter-x">
       <div className="nav-bold">
         <p>PROJECT</p>
         <p>HAJIMARI</p>
