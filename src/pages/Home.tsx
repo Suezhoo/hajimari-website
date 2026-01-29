@@ -1,10 +1,12 @@
 import React from "react";
+import EnergyOrbOverlay from "../components/overlay/EnergyOrbOverlay";
 
 const Home = () => {
   return (
-    <>
+    <main id="#home" className="relative">
+      <EnergyOrbOverlay />
       {/* Hero section */}
-      <div className="page-container-grid">
+      <section id="hero" className="page-container-grid">
         <div className="col-start-2 col-end-7 flex flex-col-reverse gap-[80px]">
           <p className="body-text-regular order-4">
             A wave-based roguelite shooter
@@ -16,10 +18,10 @@ const Home = () => {
           </div>
           <div className="h-1/4 order-1"></div>
         </div>
-      </div>
+      </section>
 
       {/* Flow energy section */}
-      <div className="page-container-grid">
+      <section id="flowing" className="page-container-grid">
         <div className="col-start-5 col-end-13 text-right flex flex-col justify-center gap-[128px]">
           <p className="anchor">
             In Hajimari's world, spiritual energy flows naturally through all
@@ -34,10 +36,10 @@ const Home = () => {
             fragile but stable balance.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Transition energy section */}
-      <div className="page-container-grid">
+      <section id="transition" className="page-container-grid">
         {/* Right / top block */}
         <div className="col-start-6 col-end-12 row-start-3 row-end-7 text-right">
           <div className="flex flex-col gap-[clamp(16px,4vw,64px)]">
@@ -65,10 +67,13 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Corrupted energy section */}
-      <div className="page-container flex flex-col justify-end gap-[32px]">
+      <section
+        id="corrupted"
+        className="page-container flex flex-col justify-end gap-[32px]"
+      >
         <div className="flex justify-between gap-[256px]">
           <p className="anchor">
             The awakend are rare individuals capable of perceiving and
@@ -88,8 +93,8 @@ const Home = () => {
             adaptation and restraint.
           </p>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
 
