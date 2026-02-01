@@ -3,10 +3,17 @@ import EnergyOrbOverlay from "../components/overlay/EnergyOrbOverlay";
 
 const Home = () => {
   return (
-    <main id="#home" className="relative">
+    <main id="home" className="relative">
       <EnergyOrbOverlay />
+
       {/* Hero section */}
-      <section id="hero" className="page-container-grid">
+      <section id="hero" className="page-container-grid relative">
+        {/* Orb anchor (rough placement) */}
+        <div
+          data-orb-anchor="hero"
+          className="marker absolute right-[25%] top-[47%] h-3 w-3 rounded-full bg-red-500/70"
+        />
+
         <div className="col-start-2 col-end-7 flex flex-col-reverse gap-[80px]">
           <p className="body-text-regular order-4">
             A wave-based roguelite shooter
@@ -16,16 +23,22 @@ const Home = () => {
             <p className="body-text-regular">Set in a world shaped by energy</p>
             <p className="body-text-regular">As your energy grows, so do you</p>
           </div>
-          <div className="h-1/4 order-1"></div>
+          <div className="h-1/4 order-1" />
         </div>
       </section>
 
       {/* Flow energy section */}
-      <section id="flowing" className="page-container-grid">
+      <section id="flowing" className="page-container-grid relative">
+        {/* Orb anchor (rough placement) */}
+        <div
+          data-orb-anchor="flowing"
+          className="marker absolute left-[25%] top-[50%] h-3 w-3 rounded-full bg-red-500/70"
+        />
+
         <div className="col-start-5 col-end-13 text-right flex flex-col justify-center gap-[128px]">
           <p className="anchor">
-            In Hajimari's world, spiritual energy flows naturally through all
-            living beings.
+            In Hajimari&apos;s world, spiritual energy flows naturally through
+            all living beings.
           </p>
           <p className="body-text-regular">
             Most humans live unaware ofit, relying on this energy to sustain
@@ -39,7 +52,13 @@ const Home = () => {
       </section>
 
       {/* Transition energy section */}
-      <section id="transition" className="page-container-grid">
+      <section id="transition" className="page-container-grid relative">
+        {/* Orb anchor (rough placement) */}
+        <div
+          data-orb-anchor="transition"
+          className="marker absolute right-[45%] top-[50%] h-3 w-3 rounded-full bg-red-500/70"
+        />
+
         {/* Right / top block */}
         <div className="col-start-6 col-end-12 row-start-3 row-end-7 text-right">
           <div className="flex flex-col gap-[clamp(16px,4vw,64px)]">
@@ -72,8 +91,14 @@ const Home = () => {
       {/* Corrupted energy section */}
       <section
         id="corrupted"
-        className="page-container flex flex-col justify-end gap-[32px]"
+        className="page-container relative flex flex-col justify-end gap-[32px]"
       >
+        {/* Orb anchor (rough placement) */}
+        <div
+          data-orb-anchor="corrupted"
+          className="marker absolute left-1/2 top-1/3 h-3 w-3 -translate-x-1/2 rounded-full bg-red-500/70"
+        />
+
         <div className="flex justify-between gap-[256px]">
           <p className="anchor">
             The awakend are rare individuals capable of perceiving and
@@ -84,6 +109,7 @@ const Home = () => {
             grow stronger.
           </p>
         </div>
+
         <div className="flex flex-col items-center">
           <p className="body-text-regular">
             Pushing back corruption and protecting humanity.
