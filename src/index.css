@@ -24,11 +24,17 @@
 }
 
 @layer components {
+  .nav-grid {
+    @apply grid grid-cols-12 gap-x-6;
+    padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x);
+  }
+
   .page-container-grid {
     @apply grid w-full grid-cols-12 gap-x-6;
     /* @apply grid-rows-12; */
     height: 100vh;
     width: 100%;
+    padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x);
     /* border: 1px dotted lightpink; */
   }
 
@@ -36,11 +42,13 @@
     @apply py-[128px];
     height: 1024px;
     width: 100%;
+    /* padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x); */
     /* border: 1px dotted lightpink; */
   }
 
   .footer-container {
     @apply grid w-full grid-cols-12 gap-x-6;
+    padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x);
     height: 340px;
   }
 
@@ -112,6 +120,6 @@
 
   /* global.css */
   .nav-scrolled {
-    @apply bg-ink text-surface! rounded-xl;
+    @apply bg-ink! text-surface! rounded-xl;
   }
 }

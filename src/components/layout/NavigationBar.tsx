@@ -24,9 +24,10 @@ const NavigationBar = () => {
         onEnterBack: () => {
           document.querySelector(".anim-nav")?.classList.remove("nav-scrolled");
         },
+        scrub: true,
       });
 
-      ScrollTrigger.refresh(); // important when layout includes fixed layers
+      ScrollTrigger.refresh();
     });
 
     return () => ctx.revert();
@@ -34,22 +35,23 @@ const NavigationBar = () => {
 
   return (
     <div className="fixed w-full z-50">
-      <div className="anim-nav flex justify-between items-center my-gutter-y mx-gutter-x text-ink p-2 duration-300">
-        <div className="nav-bold">
-          <p>PROJECT</p>
-          <p>HAJIMARI</p>
-        </div>
+      <div className="nav-grid my-gutter-y text-ink">
+        <div className="col-span-full flex justify-between -mx-2 px-2 py-3 anim-nav duration-300">
+          <div className="nav-bold">
+            <p>HAJIMARI</p>
+          </div>
 
-        <div className="flex nav-medium nav-items-gap">
-          <p>ABOUT</p>
-          <p>DEVLOG</p>
-          <p>ROADMAP</p>
-          <p>PATCH NOTES</p>
-          <p>TECH</p>
-        </div>
-        <div className="nav-medium text-right">
-          <p>PRE-ALPHA</p>
-          <p>V0.0.1</p>
+          <div className="flex nav-medium nav-items-gap">
+            <p>ABOUT</p>
+            <p>DEVLOG</p>
+            <p>ROADMAP</p>
+            <p>PATCH NOTES</p>
+            <p>TECH</p>
+          </div>
+
+          <div className="nav-medium text-right">
+            <p>PRE-ALPHA</p>
+          </div>
         </div>
       </div>
     </div>

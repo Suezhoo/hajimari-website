@@ -1,5 +1,3 @@
-import React from "react";
-import EnergyOrbOverlay from "../components/overlay/EnergyOrbOverlay";
 import GrainOverlay from "../components/overlay/GrainOverlay";
 import { VignetteOverlay } from "../components/overlay/VignetteOverlay";
 import Hero from "../components/Hero";

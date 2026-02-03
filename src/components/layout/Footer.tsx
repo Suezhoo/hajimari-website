@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <div className="relative bg-surface footer-container footer-border px-gutter-x">
