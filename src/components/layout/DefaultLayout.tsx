@@ -8,9 +8,9 @@ type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <div className="bg-surface min-h-screen min-w-screen">
+    <div className="min-h-screen min-w-screen">
       <NavigationBar />
-      <div className="px-gutter-x">{children}</div>
+      {children}
       <Footer />
     </div>
   );

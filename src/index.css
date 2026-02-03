@@ -2,8 +2,11 @@
 
 @theme {
   /* Colors */
-  --color-surface: #2e2e2e;
-  --color-ink: #e5e7eb;
+  --color-surface: #131121;
+  /* #2e2e2e | #171717 */
+  --color-ink: #ebebe6;
+  /* #e5e7eb */
+  /* #ebebe6 */
 
   /* Layout */
   --spacing-gutter-x: 96px;
@@ -24,7 +27,7 @@
   .page-container-grid {
     @apply grid w-full grid-cols-12 gap-x-6;
     /* @apply grid-rows-12; */
-    height: 1024px;
+    height: 100vh;
     width: 100%;
     /* border: 1px dotted lightpink; */
   }
@@ -66,14 +69,14 @@
     @apply font-semibold;
     font-family: var(--font-display);
     font-size: var(--text-nav);
-    color: var(--color-ink);
+    /* color: var(--color-ink); */
   }
 
   .nav-medium {
     @apply font-normal;
     font-family: var(--font-display);
     font-size: var(--text-nav);
-    color: var(--color-ink);
+    /* color: var(--color-ink); */
   }
 
   .footer-bold {
@@ -100,5 +103,15 @@
 
   .nav-items-gap {
     gap: 25px;
+  }
+
+  .rounded-t-8xl {
+    border-top-left-radius: calc(var(--radius-4xl) * 2);
+    border-top-right-radius: calc(var(--radius-4xl) * 2);
+  }
+
+  /* global.css */
+  .nav-scrolled {
+    @apply bg-ink text-surface! rounded-xl;
   }
 }

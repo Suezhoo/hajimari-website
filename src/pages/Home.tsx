@@ -1,125 +1,119 @@
 import React from "react";
 import EnergyOrbOverlay from "../components/overlay/EnergyOrbOverlay";
+import GrainOverlay from "../components/overlay/GrainOverlay";
+import { VignetteOverlay } from "../components/overlay/VignetteOverlay";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
     <main id="home" className="relative">
-      <EnergyOrbOverlay />
+      {/* overlays */}
+      <GrainOverlay />
+      <VignetteOverlay />
+      {/* <EnergyOrbOverlay /> */}
 
-      {/* Hero section */}
-      <section id="hero" className="page-container-grid relative">
-        {/* Orb anchor (rough placement) */}
-        <div
-          data-orb-anchor="hero"
-          className="marker absolute right-[25%] top-[47%] h-3 w-3 rounded-full bg-red-500/70"
-        />
+      <Hero />
 
-        <div className="col-start-2 col-end-7 flex flex-col-reverse gap-[80px]">
-          <p className="body-text-regular order-4">
-            A wave-based roguelite shooter
-          </p>
-          <h1 className="hero-title order-3 pb-[20px]">Project Hajimari</h1>
-          <div className="flex flex-col gap-[5] order-2">
-            <p className="body-text-regular">Set in a world shaped by energy</p>
-            <p className="body-text-regular">As your energy grows, so do you</p>
-          </div>
-          <div className="h-1/4 order-1" />
-        </div>
-      </section>
+      {/* ===== CONTENT WRAPPER that overlaps the fixed hero bg ===== */}
+      {/* Give it a background so it "covers" the hero image as it scrolls */}
+      <div className="relative bg-surface rounded-t-8xl">
+        {/* Flow energy section */}
+        <section
+          id="flowing"
+          className="page-container-grid relative px-gutter-x"
+        >
+          <div
+            data-orb-anchor="flowing"
+            className="marker absolute left-[25%] top-[50%] h-3 w-3 rounded-full  bg-red-300"
+          />
 
-      {/* Flow energy section */}
-      <section id="flowing" className="page-container-grid relative">
-        {/* Orb anchor (rough placement) */}
-        <div
-          data-orb-anchor="flowing"
-          className="marker absolute left-[25%] top-[50%] h-3 w-3 rounded-full bg-red-500/70"
-        />
-
-        <div className="col-start-5 col-end-13 text-right flex flex-col justify-center gap-[128px]">
-          <p className="anchor">
-            In Hajimari&apos;s world, spiritual energy flows naturally through
-            all living beings.
-          </p>
-          <p className="body-text-regular">
-            Most humans live unaware ofit, relying on this energy to sustain
-            life without ever learning to control it.
-          </p>
-          <p className="body-text-regular">
-            As long as this flow remains uninterrupted, the world exists in a
-            fragile but stable balance.
-          </p>
-        </div>
-      </section>
-
-      {/* Transition energy section */}
-      <section id="transition" className="page-container-grid relative">
-        {/* Orb anchor (rough placement) */}
-        <div
-          data-orb-anchor="transition"
-          className="marker absolute right-[45%] top-[50%] h-3 w-3 rounded-full bg-red-500/70"
-        />
-
-        {/* Right / top block */}
-        <div className="col-start-6 col-end-12 row-start-3 row-end-7 text-right">
-          <div className="flex flex-col gap-[clamp(16px,4vw,64px)]">
-            <p className="anchor">When spiritual energy is left unmanaged,</p>
-            <p className="body-text-regular">
-              It does not disappear, it accumulates.
-            </p>
-            <p className="body-text-regular">
-              In places where this energy stagnates, it becomes distorted.
-            </p>
-          </div>
-        </div>
-
-        {/* Left / bottom block */}
-        <div className="col-start-2 col-end-8 row-start-8 row-end-12">
-          <div className="flex flex-col gap-[64px]">
+          <div className="col-start-5 col-end-13 text-right flex flex-col justify-center gap-[128px] relative">
             <p className="anchor">
-              Giving rise to corrupted zones and demonic entities
+              In Hajimari&apos;s world, spiritual energy flows naturally through
+              all living beings.
             </p>
             <p className="body-text-regular">
-              These zones grow more dangerous over time,
+              Most humans live unaware of it, relying on this energy to sustain
+              life without ever learning to control it.
             </p>
             <p className="body-text-regular">
-              Threatening those unable to defend themselves.
+              As long as this flow remains uninterrupted, the world exists in a
+              fragile but stable balance.
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Corrupted energy section */}
-      <section
-        id="corrupted"
-        className="page-container relative flex flex-col justify-end gap-[32px]"
-      >
-        {/* Orb anchor (rough placement) */}
-        <div
-          data-orb-anchor="corrupted"
-          className="marker absolute left-1/2 top-1/3 h-3 w-3 -translate-x-1/2 rounded-full bg-red-500/70"
-        />
+        {/* Transition energy section */}
+        <section
+          id="transition"
+          className="page-container-grid relative px-gutter-x"
+        >
+          <div
+            data-orb-anchor="transition"
+            className="marker absolute right-[45%] top-[50%] h-3 w-3 rounded-full"
+          />
 
-        <div className="flex justify-between gap-[256px]">
-          <p className="anchor">
-            The awakend are rare individuals capable of perceiving and
-            reclaiming corrupted energy.
-          </p>
-          <p className="body-text-regular">
-            By destroying demons and their cores, they absorb this energy to
-            grow stronger.
-          </p>
-        </div>
+          {/* Right / top block */}
+          <div className="col-start-2 col-end-8 row-start-3 row-end-7 text-left relative">
+            <div className="flex flex-col gap-[clamp(16px,4vw,64px)]">
+              <p className="anchor">When spiritual energy is left unmanaged,</p>
+              <p className="body-text-regular">
+                It does not disappear, it accumulates.
+              </p>
+              <p className="body-text-regular">
+                In places where this energy stagnates, it becomes distorted.
+              </p>
+            </div>
+          </div>
 
-        <div className="flex flex-col items-center">
-          <p className="body-text-regular">
-            Pushing back corruption and protecting humanity.
-          </p>
-          <p className="body-text-regular">
-            But balance is never permant, survival depends on constant
-            adaptation and restraint.
-          </p>
-        </div>
-      </section>
+          {/* Left / bottom block */}
+          <div className="col-start-2 col-end-8 row-start-8 row-end-12 relative z-20">
+            <div className="flex flex-col gap-[64px]">
+              <p className="anchor">
+                Giving rise to corrupted zones and demonic entities
+              </p>
+              <p className="body-text-regular">
+                These zones grow more dangerous over time,
+              </p>
+              <p className="body-text-regular">
+                Threatening those unable to defend themselves.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Corrupted energy section */}
+        <section
+          id="corrupted"
+          className="page-container relative flex flex-col justify-end gap-[32px] px-gutter-x"
+        >
+          <div
+            data-orb-anchor="corrupted"
+            className="marker absolute left-1/2 top-1/3 h-3 w-3 -translate-x-1/2 rounded-full"
+          />
+
+          <div className="flex justify-between gap-[256px] relative z-20">
+            <p className="anchor">
+              The awakened are rare individuals capable of perceiving and
+              reclaiming corrupted energy.
+            </p>
+            <p className="body-text-regular">
+              By destroying demons and their cores, they absorb this energy to
+              grow stronger.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center relative z-20">
+            <p className="body-text-regular">
+              Pushing back corruption and protecting humanity.
+            </p>
+            <p className="body-text-regular">
+              But balance is never permanent, survival depends on constant
+              adaptation and restraint.
+            </p>
+          </div>
+        </section>
+      </div>
     </main>
   );
 };

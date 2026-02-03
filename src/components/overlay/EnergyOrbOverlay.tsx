@@ -73,7 +73,7 @@ export default function EnergyOrbOverlay() {
   }, []);
 
   return (
-    <div ref={rootRef} className="absolute inset-0 pointer-events-none z-50">
+    <div ref={rootRef} className="absolute inset-0 pointer-events-none z-30">
       <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
         <g id="orb">
           <circle cx="0" cy="0" r="30" fill="white" opacity="0.85" />
