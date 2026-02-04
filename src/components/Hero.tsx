@@ -53,7 +53,7 @@ const Hero = () => {
       {/* FIXED HERO SCENE */}
       <div className="fixed w-screen h-screen">
         <img
-          src="/assets/flow-corrupted.png"
+          src="/assets/transition-energy-state.png"
           alt=""
           aria-hidden
           className="anim-scale-img absolute inset-0 h-full w-full object-cover object-center"

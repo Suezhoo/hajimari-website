@@ -1,21 +1,22 @@
-import GrainOverlay from "../components/overlay/GrainOverlay";
 import { VignetteOverlay } from "../components/overlay/VignetteOverlay";
 import Hero from "../components/Hero";
+import GameDescription from "../components/GameDescription";
+import EnergyStates from "../components/EnergyStates";
 
 const Home = () => {
   return (
     <main id="home" className="relative">
       {/* overlays */}
-      <GrainOverlay />
+      {/* <GrainOverlay /> */}
       <VignetteOverlay />
       {/* <EnergyOrbOverlay /> */}
 
       <Hero />
+      <GameDescription />
+      <EnergyStates />
 
-      {/* ===== CONTENT WRAPPER that overlaps the fixed hero bg ===== */}
-      {/* Give it a background so it "covers" the hero image as it scrolls */}
+      {/* ===== CONTENT WRAPPER that overlaps the fixed hero bg =====
       <div className="relative bg-surface rounded-t-8xl">
-        {/* Flow energy section */}
         <section
           id="flowing"
           className="page-container-grid relative px-gutter-x"
@@ -41,7 +42,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Transition energy section */}
         <section
           id="transition"
           className="page-container-grid relative px-gutter-x"
@@ -51,7 +51,6 @@ const Home = () => {
             className="marker absolute right-[45%] top-[50%] h-3 w-3 rounded-full"
           />
 
-          {/* Right / top block */}
           <div className="col-start-2 col-end-8 row-start-3 row-end-7 text-left relative">
             <div className="flex flex-col gap-[clamp(16px,4vw,64px)]">
               <p className="anchor">When spiritual energy is left unmanaged,</p>
@@ -64,7 +63,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Left / bottom block */}
           <div className="col-start-2 col-end-8 row-start-8 row-end-12 relative z-20">
             <div className="flex flex-col gap-[64px]">
               <p className="anchor">
@@ -80,7 +78,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Corrupted energy section */}
         <section
           id="corrupted"
           className="page-container relative flex flex-col justify-end gap-[32px] px-gutter-x"
@@ -111,7 +108,7 @@ const Home = () => {
             </p>
           </div>
         </section>
-      </div>
+      </div> */}
     </main>
   );
 };

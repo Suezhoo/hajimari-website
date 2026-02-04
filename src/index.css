@@ -20,6 +20,7 @@
   --text-footer: 18px;
   --text-body: 18px;
   --text-anchor: 24px;
+  --text-title: 32px;
   --text-hero: 64px;
 }
 
@@ -57,6 +58,12 @@
     font-family: var(--font-display);
     font-size: var(--text-hero);
     color: var(--color-ink);
+  }
+
+  .title {
+    @apply font-bold;
+    font-family: var(--font-display);
+    font-size: var(--text-title);
   }
 
   .body-text-regular {
