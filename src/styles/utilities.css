@@ -1,0 +1,6 @@
+@layer components {
+  .rounded-t-8xl {
+    border-top-left-radius: calc(var(--radius-4xl) * 2);
+    border-top-right-radius: calc(var(--radius-4xl) * 2);
+  }
+}

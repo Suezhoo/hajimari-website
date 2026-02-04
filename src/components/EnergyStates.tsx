@@ -42,7 +42,7 @@ const EnergyStates = () => {
   return (
     <section
       id="energy-states"
-      className="page-container-grid relative bg-surface text-white content-center gap-5"
+      className="grid-container--fullscreen relative bg-surface text-white content-center gap-5"
     >
       {/* Header spanning columns 2-11 */}
       <div className="col-start-2 col-end-12 flex flex-col">

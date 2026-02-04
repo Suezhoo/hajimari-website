@@ -62,16 +62,18 @@ const Hero = () => {
         {/* dark overlay behind text */}
         <div className="absolute inset-0 bg-black/50" />
         {/* IMPORTANT: this container must be above the overlay */}
-        <div className="page-container-grid relative h-full">
-          <div className="col-start-2 col-end-7 h-full flex flex-col justify-end">
+        <div className="grid-container relative h-full">
+          <div className="col-start-2 col-span-full h-full flex flex-col justify-end">
             {/* Single wrapper with animation class for all text */}
             <div className="anim-scale-text origin-left">
-              <div className="flex flex-col gap-[80px] text-white mt-gutter-y">
+              <div className="flex flex-col hero-section-spacing">
                 <p className="body-text-regular">
                   A wave-based roguelite shooter
                 </p>
-                <h1 className="hero-title pb-[20px]">Project Hajimari</h1>
-                <div className="flex flex-col gap-[5px]">
+                <h1 className="hero-title hero-title-spacing">
+                  Project Hajimari
+                </h1>
+                <div className="flex flex-col hero-text-stack-spacing">
                   <p className="body-text-regular">
                     Set in a world shaped by energy
                   </p>
@@ -83,10 +85,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div
-            data-orb-anchor="hero"
-            className="marker absolute right-[25%] top-[47%] h-3 w-3 rounded-full"
-          />
         </div>
       </div>
       {/* HERO SPACER */}

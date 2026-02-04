@@ -4,7 +4,7 @@ const GameDescription = () => {
   return (
     <section
       id="game-description"
-      className="page-container-grid relative rounded-t-8xl bg-surface text-ink content-center"
+      className="grid-container--fullscreen relative rounded-t-8xl bg-surface text-ink content-center"
     >
       {/* Left div - columns 1-5 */}
       <div className="col-start-1 col-span-5 flex flex-col gap-[20px] text-left">

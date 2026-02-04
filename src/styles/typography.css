@@ -1,0 +1,28 @@
+@layer components {
+  .hero-title {
+    @apply font-normal;
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    color: var(--color-ink);
+  }
+
+  .title {
+    @apply font-bold;
+    font-family: var(--font-display);
+    font-size: var(--text-title);
+  }
+
+  .body-text-regular {
+    @apply font-normal;
+    font-family: var(--font-display);
+    font-size: var(--text-body);
+    color: var(--color-ink);
+  }
+
+  .anchor {
+    @apply font-semibold;
+    font-family: var(--font-display);
+    font-size: var(--text-anchor);
+    color: var(--color-ink);
+  }
+}

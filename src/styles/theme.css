@@ -1,0 +1,27 @@
+@theme {
+  /* Colors */
+  --color-surface: #131121;
+  /* #2e2e2e | #171717 */
+  --color-ink: #ebebe6;
+  /* #e5e7eb */
+  /* #ebebe6 */
+
+  /* Spacing */
+  --spacing-gutter-x: 96px;
+  --spacing-gutter-y: 30px;
+
+  --spacing-hero-title-bottom: 1.25rem; /* 20px */
+  --spacing-hero-gap: 5rem; /* 80px */
+  --spacing-hero-text-stack: 0.3125rem;
+
+  /* Font */
+  --font-family-display: "EB Garamond", serif;
+
+  /* Font scale */
+  --text-nav: 22px;
+  --text-footer: 18px;
+  --text-body: 18px;
+  --text-anchor: 24px;
+  --text-title: 32px;
+  --text-hero: 64px;
+}

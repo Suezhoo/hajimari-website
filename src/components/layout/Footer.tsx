@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="relative bg-surface footer-container footer-border px-gutter-x">
+    <div className="grid-container--footer relative bg-surface footer-border px-gutter-x">
       {/* logo */}
       <div className="col-start-1 col-end-6 w-full h-full py-gutter-y">
         <p className="footer-bold">HAJIMARI &copy;</p>
