@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+@import "./typography.css";
+@import "./utilities.css";
+@import "./layout.css";
+
+@layer components {
+  .footer-border {
+    border-top: 10px solid var(--color-accent);
+  }
+
+  .footer-separator {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .nav-items-gap {
+    gap: 25px;
+  }
+
+  /* global.css */
+  .nav-scrolled {
+    @apply bg-ink! text-surface! rounded-xl;
+  }
+}

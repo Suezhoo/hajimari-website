@@ -1,0 +1,30 @@
+@layer components {
+  .grid-container {
+    @apply grid w-full grid-cols-12 gap-x-6;
+    padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x);
+  }
+
+  .grid-container--fullscreen {
+    @apply grid w-full grid-cols-12 gap-x-6 h-screen;
+    padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x);
+  }
+
+  .grid-container--footer {
+    @apply grid w-full grid-cols-12 gap-x-6;
+    padding: var(--spacing-gutter-y) var(--spacing-gutter-x)
+      var(--spacing-gutter-y) var(--spacing-gutter-x);
+    height: fit-content;
+  }
+
+  .hero-title-spacing {
+    padding-bottom: var(--spacing-hero-title-bottom);
+  }
+
+  .hero-text-stack-spacing {
+    gap: var(--spacing-hero-text-stack);
+  }
+
+  .hero-section-spacing {
+    gap: var(--spacing-hero-gap);
+  }
+}
