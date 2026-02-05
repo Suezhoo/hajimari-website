@@ -6,34 +6,6 @@
 @import "./layout.css";
 
 @layer components {
-  .nav-bold {
-    @apply font-semibold;
-    font-family: var(--font-display);
-    font-size: var(--text-nav);
-    /* color: var(--color-ink); */
-  }
-
-  .nav-medium {
-    @apply font-normal;
-    font-family: var(--font-display);
-    font-size: var(--text-nav);
-    /* color: var(--color-ink); */
-  }
-
-  .footer-bold {
-    @apply font-bold;
-    font-family: var(--font-display);
-    font-size: var(--text-footer);
-    color: var(--color-ink);
-  }
-
-  .footer-medium {
-    @apply font-medium;
-    font-family: var(--font-display);
-    font-size: var(--text-footer);
-    color: var(--color-ink);
-  }
-
   .footer-border {
     border-top: 10px solid #8b7fa8;
   }

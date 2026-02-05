@@ -2,32 +2,21 @@ const Footer = () => {
   return (
     <div className="grid-container--footer relative bg-surface footer-border px-gutter-x">
       {/* logo */}
-      <div className="col-start-1 col-end-6 w-full h-full py-gutter-y">
-        <p className="footer-bold">HAJIMARI &copy;</p>
-        <p className="footer-medium">Built in public</p>
-      </div>
+      <div className="col-start-1 col-span-full w-full h-full py-gutter-y">
+        <div className="flex justify-between items-center">
+          <div className="flex gap-2.5 items-center">
+            <p className="footer-bold uppercase">Hajimari</p>
+            <span className="footer-medium">•</span>
+            <p className="footer-medium italic">Pre-Alpha v0.0.1</p>
+          </div>
 
-      <div className="col-start-6 col-end-13 flex footer-separator">
-        <div className="flex flex-1 flex-col justify-between py-gutter-y px-[30px]">
-          <div className="uppercase">
-            <p className="footer-bold">About Hajimari</p>
-            <p className="footer-medium">Project</p>
-            <p className="footer-medium">Developer</p>
+          <div className="flex gap-2.5 items-center footer-small italic">
+            <p>&copy; 2026</p>
+            <span>•</span>
+            <p>Hajimari</p>
+            <span>•</span>
+            <p>All rights reserved</p>
           </div>
-          <div className="uppercase">
-            <p className="footer-bold">Updates</p>
-            <p className="footer-medium">Devlog</p>
-            <p className="footer-medium">Roadmap</p>
-            <p className="footer-medium">Patch Notes</p>
-          </div>
-        </div>
-        <div className="flex-1 flex flex-col py-gutter-y px-[30px] uppercase">
-          <p className="footer-bold">Technology</p>
-          <p className="footer-medium">Website</p>
-          <p className="footer-medium">Game</p>
-        </div>
-        <div className="flex-1 flex flex-col py-gutter-y px-[30px] uppercase">
-          <p className="footer-bold">Socials</p>
         </div>
       </div>
     </div>

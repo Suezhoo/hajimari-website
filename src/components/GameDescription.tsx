@@ -7,10 +7,10 @@ const GameDescription = () => {
       className="grid-container--fullscreen relative rounded-t-8xl bg-surface text-ink content-center"
     >
       {/* Left div - columns 1-5 */}
-      <div className="col-start-1 col-span-5 flex flex-col gap-[20px] text-left">
-        <div className="flex flex-col w-fit gap-[10px]">
+      <div className="col-start-1 col-span-5 flex flex-col gap-5 text-left">
+        <div className="flex flex-col w-fit gap-2.5">
           <h2 className="title whitespace-nowrap uppercase">Game Concept</h2>
-          <div className="h-[2px] w-[125%] bg-ink" />
+          <div className="h-0.5 w-[125%] bg-ink" />
         </div>
         <p>
           Project Hajimari is a{" "}
@@ -26,12 +26,12 @@ const GameDescription = () => {
       </div>
 
       {/* Right div - columns 8-12 */}
-      <div className="col-start-8 col-span-5 flex flex-col gap-[20px] text-right">
-        <div className="flex flex-col w-fit gap-[10px] items-end self-end">
+      <div className="col-start-8 col-span-5 flex flex-col gap-5 text-right">
+        <div className="flex flex-col w-fit gap-2.5 items-end self-end">
           <h2 className="title whitespace-nowrap uppercase">
             World and setting
           </h2>
-          <div className="h-[2px] w-[125%] bg-ink" />
+          <div className="h-0.5 w-[125%] bg-ink" />
         </div>
         <p>
           The world of <span className="font-bold">Hajimari</span> is a human

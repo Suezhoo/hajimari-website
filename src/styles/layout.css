@@ -11,8 +11,9 @@
 
   .grid-container--footer {
     @apply grid w-full grid-cols-12 gap-x-6;
-    padding: 0 var(--spacing-gutter-x) 0 var(--spacing-gutter-x);
-    height: 340px;
+    padding: var(--spacing-gutter-y) var(--spacing-gutter-x)
+      var(--spacing-gutter-y) var(--spacing-gutter-x);
+    height: fit-content;
   }
 
   .hero-title-spacing {

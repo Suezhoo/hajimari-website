@@ -2,27 +2,62 @@
   .hero-title {
     @apply font-normal;
     font-family: var(--font-display);
-    font-size: var(--text-hero);
+    font-size: var(--font-size-hero);
     color: var(--color-ink);
   }
 
   .title {
     @apply font-bold;
     font-family: var(--font-display);
-    font-size: var(--text-title);
+    font-size: var(--font-size-title);
   }
 
   .body-text-regular {
     @apply font-normal;
     font-family: var(--font-display);
-    font-size: var(--text-body);
+    font-size: var(--font-size-body);
     color: var(--color-ink);
   }
 
   .anchor {
     @apply font-semibold;
     font-family: var(--font-display);
-    font-size: var(--text-anchor);
+    font-size: var(--font-size-anchor);
     color: var(--color-ink);
+  }
+
+  .footer-bold {
+    @apply font-bold;
+    font-family: var(--font-display);
+    font-size: var(--font-size-footer);
+    color: var(--color-ink);
+  }
+
+  .footer-medium {
+    @apply font-medium;
+    font-family: var(--font-display);
+    font-size: var(--font-size-footer);
+    color: var(--color-ink);
+  }
+
+  .footer-small {
+    @apply font-medium;
+    font-family: var(--font-display);
+    font-size: var(--font-size-small);
+    color: var(--color-ink);
+  }
+
+  .nav-bold {
+    @apply font-semibold;
+    font-family: var(--font-display);
+    font-size: var(--font-size-nav);
+    /* color: var(--color-ink); */
+  }
+
+  .nav-medium {
+    @apply font-normal;
+    font-family: var(--font-display);
+    font-size: var(--font-size-nav);
+    /* color: var(--color-ink); */
   }
 }

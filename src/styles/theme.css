@@ -1,27 +1,24 @@
 @theme {
   /* Colors */
   --color-surface: #131121;
-  /* #2e2e2e | #171717 */
   --color-ink: #ebebe6;
-  /* #e5e7eb */
-  /* #ebebe6 */
 
   /* Spacing */
-  --spacing-gutter-x: 96px;
-  --spacing-gutter-y: 30px;
-
+  --spacing-gutter-x: 6rem; /* 96px */
+  --spacing-gutter-y: 1.875rem; /* 30px */
   --spacing-hero-title-bottom: 1.25rem; /* 20px */
   --spacing-hero-gap: 5rem; /* 80px */
-  --spacing-hero-text-stack: 0.3125rem;
+  --spacing-hero-text-stack: 0.3125rem; /* 5px */
 
-  /* Font */
+  /* Typography */
   --font-family-display: "EB Garamond", serif;
 
-  /* Font scale */
-  --text-nav: 22px;
-  --text-footer: 18px;
-  --text-body: 18px;
-  --text-anchor: 24px;
-  --text-title: 32px;
-  --text-hero: 64px;
+  /* Font sizes */
+  --font-size-hero: 4rem; /* 64px */
+  --font-size-title: 2rem; /* 32px */
+  --font-size-anchor: 1.5rem; /* 24px */
+  --font-size-nav: 1.375rem; /* 22px */
+  --font-size-body: 1.125rem; /* 18px */
+  --font-size-footer: 1.125rem; /* 18px */
+  --font-size-small: 1rem; /* 16px */
 }
