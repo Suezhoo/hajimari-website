@@ -7,7 +7,7 @@
 
 @layer components {
   .footer-border {
-    border-top: 10px solid #8b7fa8;
+    border-top: 10px solid var(--color-accent);
   }
 
   .footer-separator {

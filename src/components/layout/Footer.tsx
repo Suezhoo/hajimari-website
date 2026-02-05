@@ -1,7 +1,6 @@
 const Footer = () => {
   return (
-    <div className="grid-container--footer relative bg-surface footer-border px-gutter-x">
-      {/* logo */}
+    <div className="grid-container--footer relative bg-surface text-ink footer-border px-gutter-x">
       <div className="col-start-1 col-span-full w-full h-full py-gutter-y">
         <div className="flex justify-between items-center">
           <div className="flex gap-2.5 items-center">

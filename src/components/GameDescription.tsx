@@ -10,7 +10,7 @@ const GameDescription = () => {
       <div className="col-start-1 col-span-5 flex flex-col gap-5 text-left">
         <div className="flex flex-col w-fit gap-2.5">
           <h2 className="title whitespace-nowrap uppercase">Game Concept</h2>
-          <div className="h-0.5 w-[125%] bg-ink" />
+          <div className="h-0.5 w-[125%] bg-accent" />
         </div>
         <p>
           Project Hajimari is a{" "}
@@ -31,7 +31,7 @@ const GameDescription = () => {
           <h2 className="title whitespace-nowrap uppercase">
             World and setting
           </h2>
-          <div className="h-0.5 w-[125%] bg-ink" />
+          <div className="h-0.5 w-[125%] bg-accent" />
         </div>
         <p>
           The world of <span className="font-bold">Hajimari</span> is a human

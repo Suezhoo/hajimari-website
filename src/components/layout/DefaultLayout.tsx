@@ -46,6 +46,8 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     <div className="min-h-screen min-w-screen">
       <NavigationBar />
       {children}
+
+      <div className="relative h-25 bg-surface" />
       <Footer />
     </div>
   );

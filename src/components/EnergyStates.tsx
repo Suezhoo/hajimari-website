@@ -61,7 +61,7 @@ const EnergyStates = () => {
               Flowing
             </h2>
             <div
-              className={`h-0.5 bg-white transition-all duration-300 ${
+              className={`h-0.5 bg-accent transition-all duration-300 ${
                 activeState === "flowing"
                   ? "w-full opacity-100"
                   : "w-0 opacity-0"
@@ -81,7 +81,7 @@ const EnergyStates = () => {
               Transition
             </h2>
             <div
-              className={`h-0.5 bg-white transition-all duration-300 ${
+              className={`h-0.5 bg-accent transition-all duration-300 ${
                 activeState === "transition"
                   ? "w-full opacity-100"
                   : "w-0 opacity-0"
@@ -101,7 +101,7 @@ const EnergyStates = () => {
               Corrupted
             </h2>
             <div
-              className={`h-0.5 bg-white transition-all duration-300 ${
+              className={`h-0.5 bg-accent transition-all duration-300 ${
                 activeState === "corrupted"
                   ? "w-full opacity-100"
                   : "w-0 opacity-0"
