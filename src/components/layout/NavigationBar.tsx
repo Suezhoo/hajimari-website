@@ -1,3 +1,5 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect } from "react";
@@ -41,16 +43,22 @@ const NavigationBar = () => {
             <p>HAJIMARI</p>
           </div>
 
-          <div className="flex nav-medium nav-items-gap">
+          {/* <div className="flex nav-medium nav-items-gap">
             <p>ABOUT</p>
             <p>DEVLOG</p>
             <p>ROADMAP</p>
             <p>PATCH NOTES</p>
             <p>TECH</p>
-          </div>
+          </div> */}
 
           <div className="nav-medium text-right">
-            <p>PRE-ALPHA</p>
+            <a
+              href="https://github.com/suezhoo/hajimari"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
           </div>
         </div>
       </div>
