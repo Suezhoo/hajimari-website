@@ -10,7 +10,7 @@ export default function GrainOverlay() {
           backgroundRepeat: "repeat",
           backgroundSize: "512px 512px",
           mixBlendMode: "soft-light",
-          opacity: 0.22,
+          opacity: 0.11,
         }}
       />
     </>

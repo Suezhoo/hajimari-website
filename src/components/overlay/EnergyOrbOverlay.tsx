@@ -11,10 +11,8 @@ type Point = { x: number; y: number };
 
 export default function EnergyOrbOverlay() {
   const rootRef = useRef<HTMLDivElement | null>(null);
-  let callCount = 0;
 
   useLayoutEffect(() => {
-    console.log("useLayoutEffect() call", ++callCount);
     const homeContainer =
       (document.querySelector("#home") as HTMLElement) || null;
     const markers = Array.from(
