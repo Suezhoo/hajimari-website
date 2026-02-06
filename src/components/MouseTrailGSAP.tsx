@@ -67,8 +67,8 @@ export default function MouseTrailGSAP() {
         : { h: 175 + Math.random() * 25, s: 85, l: 65 };
 
       trail.style.position = "fixed";
-      trail.style.left = "0px";
-      trail.style.top = "0px";
+      trail.style.left = "25px";
+      trail.style.top = "35px";
       trail.style.width = `${size}px`;
       trail.style.height = `${size}px`;
       trail.style.borderRadius = "50%";
