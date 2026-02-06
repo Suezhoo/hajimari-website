@@ -2,7 +2,7 @@ const GameDescription = () => {
   return (
     <section
       id="game-description"
-      className="grid-container--fullscreen relative rounded-t-8xl bg-surface text-ink content-center"
+      className="grid-container--fullscreen relative rounded-t-4xl lg:rounded-t-8xl bg-surface text-ink content-center pt-24 lg:pt-0 scroll-mt-24"
     >
       {/* Mobile-first: full width, stacked.
           Desktop (lg): your original 2-column layout. */}
