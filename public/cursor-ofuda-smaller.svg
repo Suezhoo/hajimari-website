@@ -1,0 +1,17 @@
+<svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="14" y1="2" x2="14" y2="32">
+      <stop offset="0" stop-color="#EBEBE6"></stop>
+      <stop offset="1" stop-color="rgba(235,235,230,0.85)"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- pointed ofuda tip -->
+  <path d="M14 2
+       L22 24
+       Q14 28 6 24
+       Z" fill="url(#paper)" stroke="rgba(19,17,33,0.55)" stroke-width="1" stroke-linejoin="round"></path>
+
+  <!-- subtle center crease -->
+  <path d="M14 5 L14 24.5" stroke="rgba(19,17,33,0.25)" stroke-width="1" stroke-linecap="round"></path>
+</svg>

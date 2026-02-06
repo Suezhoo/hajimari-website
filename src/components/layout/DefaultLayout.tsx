@@ -5,6 +5,9 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import GrainOverlay from "../overlay/GrainOverlay";
+import { VignetteOverlay } from "../overlay/VignetteOverlay";
+import MouseTrailGSAP from "../MouseTrailGSAP";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -45,8 +48,10 @@ const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
     <div className="min-h-screen min-w-screen">
       <NavigationBar />
+      <GrainOverlay />
+      <VignetteOverlay />
+      <MouseTrailGSAP />
       {children}
-
       <div className="relative h-25 bg-surface" />
       <Footer />
     </div>
