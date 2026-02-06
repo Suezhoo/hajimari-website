@@ -1,29 +1,43 @@
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
 }
 
+function useIsTouchDevice() {
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    // coarse pointer = touch-first devices (most phones/tablets)
+    const mq = window.matchMedia("(pointer: coarse)");
+    const update = () => setIsTouch(mq.matches || navigator.maxTouchPoints > 0);
+
+    update();
+    mq.addEventListener?.("change", update);
+    return () => mq.removeEventListener?.("change", update);
+  }, []);
+
+  return isTouch;
+}
+
 export default function MouseTrailGSAP() {
+  const isTouch = useIsTouchDevice();
+
   const containerRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (isTouch) return; // ✅ do nothing on touch devices
+
     const container = containerRef.current;
     const cursor = cursorRef.current;
     if (!container || !cursor) return;
 
-    // -------------------------
-    // Config
-    // -------------------------
-    const BASE_ROTATION = -35; // degrees (slight tilt like a real cursor)
-    const FOLLOW = 0.2; // cursor smoothing
+    const BASE_ROTATION = -35;
+    const FOLLOW = 0.2;
     const SPAWN_DIST = 12;
 
-    // -------------------------
-    // Mouse state
-    // -------------------------
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
 
@@ -36,12 +50,10 @@ export default function MouseTrailGSAP() {
     let lastTrailX = mouseX;
     let lastTrailY = mouseY;
 
-    // Quick setters (fast + clean)
     const setCursorX = gsap.quickSetter(cursor, "x", "px");
     const setCursorY = gsap.quickSetter(cursor, "y", "px");
     const setCursorRot = gsap.quickSetter(cursor, "rotation", "deg");
 
-    // Initial cursor placement (never starts at 0,0)
     gsap.set(cursor, { x: currentX, y: currentY, rotation: BASE_ROTATION });
 
     const spawnTrail = (x: number, y: number) => {
@@ -55,8 +67,8 @@ export default function MouseTrailGSAP() {
         : { h: 175 + Math.random() * 25, s: 85, l: 65 };
 
       trail.style.position = "fixed";
-      trail.style.left = "30px";
-      trail.style.top = "25px";
+      trail.style.left = "0px";
+      trail.style.top = "0px";
       trail.style.width = `${size}px`;
       trail.style.height = `${size}px`;
       trail.style.borderRadius = "50%";
@@ -126,11 +138,9 @@ export default function MouseTrailGSAP() {
     };
 
     const tickerFn = () => {
-      // Smooth follow
       currentX += (mouseX - currentX) * FOLLOW;
       currentY += (mouseY - currentY) * FOLLOW;
 
-      // Velocity-based sway
       const vx = mouseX - prevMouseX;
       const vy = mouseY - prevMouseY;
       prevMouseX = mouseX;
@@ -138,7 +148,6 @@ export default function MouseTrailGSAP() {
 
       const swing = clamp(vx * 0.6 + vy * 0.1, -28, 28);
 
-      // Apply (base tilt + swing)
       setCursorX(currentX);
       setCursorY(currentY);
       setCursorRot(BASE_ROTATION + swing);
@@ -150,49 +159,54 @@ export default function MouseTrailGSAP() {
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       gsap.ticker.remove(tickerFn);
-      // cleanup any remaining trail nodes (optional but nice)
       container.innerHTML = "";
     };
-  }, []);
+  }, [isTouch]);
 
   return (
     <>
-      <style>{`
-        * { cursor: none !important; }
-      `}</style>
+      {/* Only hide the native cursor on non-touch */}
+      {!isTouch && (
+        <style>{`
+          * { cursor: none !important; }
+        `}</style>
+      )}
 
-      <div
-        ref={containerRef}
-        className="fixed inset-0 pointer-events-none"
-        style={{ zIndex: 9999, mixBlendMode: "screen" }}
-      />
+      {/* Don’t render on touch at all */}
+      {!isTouch && (
+        <>
+          <div
+            ref={containerRef}
+            className="fixed inset-0 pointer-events-none"
+            style={{ zIndex: 9999, mixBlendMode: "screen" }}
+          />
 
-      {/* Cursor */}
-      <div
-        ref={cursorRef}
-        className="fixed pointer-events-none"
-        style={{
-          width: 34,
-          height: 58,
-          zIndex: 10000,
-          // aligns mouse to tip; GSAP handles x/y/rotation
-          transform: "translate(-50%, -6%)",
-          transformOrigin: "50% 6%",
-          willChange: "transform",
-        }}
-      >
-        <img
-          src="/cursor-ofuda-smaller.svg"
-          alt=""
-          draggable={false}
-          style={{
-            width: "100%",
-            height: "100%",
-            display: "block",
-            userSelect: "none",
-          }}
-        />
-      </div>
+          <div
+            ref={cursorRef}
+            className="fixed pointer-events-none"
+            style={{
+              width: 34,
+              height: 58,
+              zIndex: 10000,
+              transform: "translate(-50%, -6%)",
+              transformOrigin: "50% 6%",
+              willChange: "transform",
+            }}
+          >
+            <img
+              src="/cursor-ofuda-smaller.svg"
+              alt=""
+              draggable={false}
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "block",
+                userSelect: "none",
+              }}
+            />
+          </div>
+        </>
+      )}
     </>
   );
 }
