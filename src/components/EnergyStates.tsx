@@ -44,91 +44,57 @@ const EnergyStates = () => {
       id="energy-states"
       className="grid-container--fullscreen relative bg-surface text-white content-center gap-5"
     >
-      {/* Header spanning columns 2-11 */}
-      <div className="col-start-2 col-end-12 flex flex-col">
+      {/* Header: full width on mobile, centered grid area on desktop */}
+      <div className="col-span-12 lg:col-start-2 lg:col-end-12 flex flex-col">
         <p className="text-sm uppercase tracking-wide">Energy States</p>
-        {/* Three energy state titles - each takes ~3 columns */}
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-2">
-            <h2
-              className={`title cursor-pointer transition-all ${
-                activeState === "flowing"
-                  ? "font-bold"
-                  : "font-normal opacity-50"
-              }`}
-              onClick={() => setActiveState("flowing")}
-            >
-              Flowing
-            </h2>
-            <div
-              className={`h-0.5 bg-accent transition-all duration-300 ${
-                activeState === "flowing"
-                  ? "w-full opacity-100"
-                  : "w-0 opacity-0"
-              }`}
-            />
-          </div>
 
-          <div className="flex flex-col gap-2">
-            <h2
-              className={`title cursor-pointer transition-all ${
-                activeState === "transition"
-                  ? "font-bold"
-                  : "font-normal opacity-50"
-              }`}
-              onClick={() => setActiveState("transition")}
+        {/* Tabs: stack on mobile, row on desktop */}
+        <div className="mt-3 flex justify-between gap-3 sm:flex-row sm:justify-between sm:gap-6">
+          {(
+            [
+              ["flowing", "Flowing"],
+              ["transition", "Transition"],
+              ["corrupted", "Corrupted"],
+            ] as const
+          ).map(([key, label]) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setActiveState(key)}
+              className="group w-fit text-left"
             >
-              Transition
-            </h2>
-            <div
-              className={`h-0.5 bg-accent transition-all duration-300 ${
-                activeState === "transition"
-                  ? "w-full opacity-100"
-                  : "w-0 opacity-0"
-              }`}
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <h2
-              className={`title cursor-pointer transition-all ${
-                activeState === "corrupted"
-                  ? "font-bold"
-                  : "font-normal opacity-50"
-              }`}
-              onClick={() => setActiveState("corrupted")}
-            >
-              Corrupted
-            </h2>
-            <div
-              className={`h-0.5 bg-accent transition-all duration-300 ${
-                activeState === "corrupted"
-                  ? "w-full opacity-100"
-                  : "w-0 opacity-0"
-              }`}
-            />
-          </div>
+              <h2
+                className={`title cursor-pointer transition-all ${
+                  activeState === key ? "font-bold" : "font-normal opacity-50"
+                }`}
+              >
+                {label}
+              </h2>
+              <div
+                className={`h-0.5 bg-accent transition-all duration-300 ${
+                  activeState === key ? "w-full opacity-100" : "w-0 opacity-0"
+                }`}
+              />
+            </button>
+          ))}
         </div>
       </div>
 
-      {/* Image on the left - columns 2-8 */}
-      <div className="col-start-2 col-end-9 row-start-3">
+      {/* Content: stack (image then text) on mobile, side-by-side on desktop */}
+      <div className="col-span-12 lg:col-start-2 lg:col-end-9 lg:row-start-3">
         <img
           src={stateContent[activeState].image}
           alt={`${activeState} energy state visualization`}
-          className="w-full h-[65vh] object-cover transition-opacity duration-300"
+          className="h-[38vh] w-full object-cover transition-opacity duration-300 sm:h-[50vh] lg:h-[65vh]"
         />
       </div>
 
-      {/* Text content on the right - columns 9-11 */}
-      <div className="col-start-9 col-span-3 row-start-3 flex flex-col justify-center gap-5">
-        {stateContent[activeState].paragraphs.map(
-          (text: string, index: number) => (
-            <p key={index} className="body-text-regular">
-              {text}
-            </p>
-          ),
-        )}
+      <div className="col-span-12 mt-8 lg:mt-0 lg:col-start-9 lg:col-span-3 lg:row-start-3 flex flex-col justify-center gap-5">
+        {stateContent[activeState].paragraphs.map((text, index) => (
+          <p key={index} className="body-text-regular">
+            {text}
+          </p>
+        ))}
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ export default function MouseTrailGSAP() {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isTouch) return; // ✅ do nothing on touch devices
+    if (isTouch) return;
 
     const container = containerRef.current;
     const cursor = cursorRef.current;

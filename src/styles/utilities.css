@@ -1,6 +1,28 @@
-@layer components {
+@layer utilities {
   .rounded-t-8xl {
     border-top-left-radius: calc(var(--radius-4xl) * 2);
     border-top-right-radius: calc(var(--radius-4xl) * 2);
+  }
+}
+
+@layer utilities {
+  .px-gutter-x {
+    padding-left: var(--spacing-gutter-x);
+    padding-right: var(--spacing-gutter-x);
+  }
+
+  .py-gutter-y {
+    padding-top: var(--spacing-gutter-y);
+    padding-bottom: var(--spacing-gutter-y);
+  }
+
+  .my-gutter-y {
+    margin-top: var(--spacing-gutter-y);
+    margin-bottom: var(--spacing-gutter-y);
+  }
+
+  .mx-gutter-x {
+    margin-left: var(--spacing-gutter-x);
+    margin-right: var(--spacing-gutter-x);
   }
 }

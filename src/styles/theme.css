@@ -1,25 +1,68 @@
+/* 1) Tailwind v4 token definitions (this is what generates bg-ink, text-surface, etc.) */
 @theme {
-  /* Colors */
   --color-surface: #131121;
   --color-ink: #ebebe6;
   --color-accent: #8b7fa8;
 
-  /* Spacing */
-  --spacing-gutter-x: 6rem; /* 96px */
-  --spacing-gutter-y: 1.875rem; /* 30px */
-  --spacing-hero-title-bottom: 1.25rem; /* 20px */
-  --spacing-hero-gap: 5rem; /* 80px */
-  --spacing-hero-text-stack: 0.3125rem; /* 5px */
-
-  /* Typography */
   --font-family-display: "EB Garamond", serif;
 
-  /* Font sizes */
-  --font-size-hero: 4rem; /* 64px */
-  --font-size-title: 2rem; /* 32px */
-  --font-size-anchor: 1.5rem; /* 24px */
-  --font-size-nav: 1.375rem; /* 22px */
-  --font-size-body: 1.125rem; /* 18px */
-  --font-size-footer: 1.125rem; /* 18px */
-  --font-size-small: 1rem; /* 16px */
+  /* You CAN also put default spacing/font sizes here if you want,
+     but keeping them in :root is totally fine. */
+}
+
+/* 2) Your responsive overrides + defaults */
+@layer base {
+  :root {
+    /* Spacing (desktop) */
+    --spacing-gutter-x: 6rem; /* 96px */
+    --spacing-gutter-y: 1.875rem; /* 30px */
+    --spacing-hero-title-bottom: 1.25rem; /* 20px */
+    --spacing-hero-gap: 5rem; /* 80px */
+    --spacing-hero-text-stack: 0.3125rem; /* 5px */
+
+    /* Font sizes (desktop) */
+    --font-size-hero: 4rem; /* 64px */
+    --font-size-title: 2rem; /* 32px */
+    --font-size-anchor: 1.5rem; /* 24px */
+    --font-size-nav: 1.375rem; /* 22px */
+    --font-size-body: 1.125rem; /* 18px */
+    --font-size-footer: 1.125rem; /* 18px */
+    --font-size-small: 1rem; /* 16px */
+  }
+
+  /* Tablet (≤1024px) */
+  @media (max-width: 1024px) {
+    :root {
+      --spacing-gutter-x: 2.5rem; /* 40px */
+      --spacing-gutter-y: 1.5rem; /* 24px */
+      --spacing-hero-gap: 5rem; /* 80px */
+      --spacing-hero-title-bottom: 1rem; /* 16px */
+
+      --font-size-hero: 3rem; /* 48px */
+      --font-size-title: 1.75rem; /* 28px */
+      --font-size-anchor: 1.25rem; /* 20px */
+      --font-size-nav: 1.125rem; /* 18px */
+      --font-size-body: 1rem; /* 16px */
+      --font-size-footer: 1rem; /* 16px */
+      --font-size-small: 0.875rem; /* 14px */
+    }
+  }
+
+  /* Mobile (≤640px) */
+  @media (max-width: 640px) {
+    :root {
+      --spacing-gutter-x: 1.25rem; /* 20px */
+      --spacing-gutter-y: 1.25rem; /* 20px */
+      --spacing-hero-gap: 5rem; /* 80px */
+      --spacing-hero-title-bottom: 0.75rem; /* 12px */
+
+      --font-size-hero: 2.25rem; /* 36px */
+      --font-size-title: 1.5rem; /* 24px */
+      --font-size-anchor: 1.125rem; /* 18px */
+      --font-size-nav: 1rem; /* 16px */
+      --font-size-body: 0.9375rem; /* 15px */
+      --font-size-footer: 0.9375rem; /* 15px */
+      --font-size-small: 0.8125rem; /* 13px */
+    }
+  }
 }
